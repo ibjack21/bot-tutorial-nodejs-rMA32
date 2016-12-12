@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexWho = /^\/Who/;botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/trash/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
       botRegexSlut = /^\/slut/; botRegexStop = /^\/stop/;
       botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
@@ -30,7 +30,7 @@ function respond() {
   } 
   else if(request.text && botRegexStop.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Stop appropriating black culture");
+    postMessage("https://cdn.meme.am/instances/57144266.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexProp.test(request.text)) {
@@ -76,7 +76,7 @@ function respond() {
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-    postMessage("http://daddyleagues.com/maddenall32/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/LacesOut/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   
@@ -85,9 +85,9 @@ function respond() {
     postMessage("www.daddyleagues.com/maddenrating/");
     this.res.end();
   } 
-  else if(request.text && botRegexSalt.test(request.text)) {
+  else if(request.text && botRegexWho.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.imgur.com/B5BSVqH.png");
+    postMessage("http://i.imgur.com/DUCXHyb.gif");
     this.res.end();
   } 
   else if(request.text && botRegexAd.test(request.text)) {
@@ -97,7 +97,7 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
+    postMessage("http://i.imgur.com/QbZmt9a.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
@@ -108,26 +108,26 @@ function respond() {
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
     
-    postMessage("http://daddyleagues.com/maddenall32/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/LacesOut/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/maddenall32/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/LacesOut/players?name="+rep+"&position=all&team=all");
     
     this.res.end();
   }  
 
   else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
+    postMessage("http://c8.alamy.com/comp/CRKGE3/overflowing-trash-can-new-york-CRKGE3.jpg"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.reddit.com/r/maddenall32");
+    postMessage("http://www.daddyleagues.com/LacesOut");
     this.res.end();
   } 
   else if(request.text && botRegexSh.test(request.text)) {
@@ -162,7 +162,7 @@ function respond() {
   }
   else if(request.text && botRegexSchedule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1EORExkB6HNLZhi22mRo2Xmo6Yx90Em2rGNAYlAdjTeI/edit?usp=drive_web");
+    postMessage("http://www.daddyleagues.com/LacesOut/schedules");
     this.res.end();
   }
   
