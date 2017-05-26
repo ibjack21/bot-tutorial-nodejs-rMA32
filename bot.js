@@ -97,7 +97,7 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://i.imgur.com/NTud9qa.jpg");
+    postMessage("https://docs.google.com/document/d/1BqrT5QIqbEAgrgOmm575mlwx6oTGcx_RSnZyaddzCJ4");
     this.res.end();
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
